@@ -1,6 +1,7 @@
 package statistics
 
 import (
+	"container/list"
 	"errors"
 	"fmt"
 	"log"
@@ -90,6 +91,9 @@ func processRequest(request *http.Request) ([]float64, string, bool) {
 			}
 		}
 	}
+
+	list1 := list.New()
+	list1.InsertAfter("ss", nil)
 
 	if len(numbers) == 0 {
 		return numbers, "", false
